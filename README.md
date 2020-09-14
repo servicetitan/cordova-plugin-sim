@@ -121,7 +121,6 @@ All methods of `SubscriptionManager` require permission `READ_PHONE_STATE`.
 - `phoneNumber`: {String} [`READ_PHONE_STATE`] - phone number string for line 1, for example, the [MSISDN](http://en.wikipedia.org/wiki/MSISDN) for a GSM phone <sup>1</sup>
 - `deviceId`: {String} [`READ_PHONE_STATE`] the unique device ID, for example, the IMEI for GSM and the MEID or ESN for CDMA phones
 - `deviceSoftwareVersion`: {String} [`READ_PHONE_STATE`] the software version number for the device, for example, the IMEI/SV for GSM phones
-- `simSerialNumber`: {String} [`READ_PHONE_STATE`] the serial number of the SIM, if applicable
 - `subscriberId`: {String} [`READ_PHONE_STATE`] the unique subscriber ID, for example, the IMSI for a GSM phone
 - `cards`: {Array} [`READ_PHONE_STATE`] List of SIM cards
   - `carrierName`: {String} the name displayed to the user that identifies Subscription provider name
@@ -134,7 +133,6 @@ All methods of `SubscriptionManager` require permission `READ_PHONE_STATE`.
   - `simSlotIndex`: {Number} the slot index of this Subscription's SIM card
   - `phoneNumber`: {String} the number of this subscription
   - `deviceId`: {String} the unique device ID of a subscription, for example, the IMEI for GSM and the MEID for CDMA phones
-  - `simSerialNumber`: {String} ICC ID
   - `subscriptionId`: {String} Subscription Identifier, this is a device unique number
 
 
@@ -151,7 +149,6 @@ Sometimes phoneNumber is only an empty string.
   "mnc": "260",
   "phoneNumber": "15555215554",
   "deviceId": "0000000000000000",
-  "simSerialNumber": "89014103211118510720",
   "subscriberId": "310260000000000",
   "callState": 0,
   "dataActivity": 0,
@@ -253,7 +250,6 @@ This plugin needs `READ_PHONE_STATE` permission for getting the following values
 * `phoneNumber`
 * `deviceId`
 * `deviceSoftwareVersion`
-* `simSerialNumber`
 * `subscriberId`
 * `activeSubscriptionInfoCount`
 * `activeSubscriptionInfoCountMax`

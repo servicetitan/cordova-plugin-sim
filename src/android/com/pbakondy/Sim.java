@@ -99,7 +99,6 @@ public class Sim extends CordovaPlugin {
               String countryIso = subscriptionInfo.getCountryIso();
               int dataRoaming = subscriptionInfo.getDataRoaming();  // 1 is enabled ; 0 is disabled
               CharSequence displayName = subscriptionInfo.getDisplayName();
-              String iccId = subscriptionInfo.getIccId();
               int mcc = subscriptionInfo.getMcc();
               int mnc = subscriptionInfo.getMnc();
               String number = subscriptionInfo.getNumber();
@@ -128,7 +127,6 @@ public class Sim extends CordovaPlugin {
               if (deviceId != null) {
                 simData.put("deviceId", deviceId);
               }
-              simData.put("simSerialNumber", iccId);
               simData.put("subscriptionId", subscriptionId);
 
               sims.put(simData);
@@ -149,7 +147,6 @@ public class Sim extends CordovaPlugin {
 
       String deviceId = null;
       String deviceSoftwareVersion = null;
-      String simSerialNumber = null;
       String subscriberId = null;
 
       int callState = manager.getCallState();
@@ -164,7 +161,6 @@ public class Sim extends CordovaPlugin {
         phoneNumber = manager.getLine1Number();
         deviceId = manager.getDeviceId();
         deviceSoftwareVersion = manager.getDeviceSoftwareVersion();
-        simSerialNumber = manager.getSimSerialNumber();
         subscriberId = manager.getSubscriberId();
       }
 
@@ -205,7 +201,6 @@ public class Sim extends CordovaPlugin {
         result.put("phoneNumber", phoneNumber);
         result.put("deviceId", deviceId);
         result.put("deviceSoftwareVersion", deviceSoftwareVersion);
-        result.put("simSerialNumber", simSerialNumber);
         result.put("subscriberId", subscriberId);
       }
 
